@@ -3,10 +3,10 @@
    Change these values to update your counters!
    =========================== */
 const charityStats = {
-    moneyRaised: 0,      // Total money raised in dollars
-    peopleHelped: 0,       // Number of people helped
-    projectsCompleted: 0,    // Number of completed projects
-    volunteers: 0           // Number of active volunteers
+    moneyRaised: 100,      // Total money raised in dollars
+    peopleHelped: 2,       // Number of people helped
+    projectsCompleted: 1,    // Number of completed projects
+    volunteers: 1           // Number of active volunteers
 };
 
 /* ===========================
