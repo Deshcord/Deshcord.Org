@@ -153,15 +153,15 @@ body {
     text-align: center;
 }
 
-/* 100tk Feeds Logo - Small, at top */
+/* 100tk Feeds Logo - MUCH BIGGER */
 .feeds-logo-top {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .hero-feeds-logo {
-    height: 120px;
+    height: 220px;
     width: auto;
-    max-width: 500px;
+    max-width: 800px;
     object-fit: contain;
 }
 
@@ -187,52 +187,63 @@ body {
 }
 
 /* ===========================
-   COLLABORATION LOGOS SECTION - SMALL
+   COLLABORATION LOGOS SECTION - BIGGER & WIDER SPACING
    =========================== */
 .collaboration-section {
-    margin-top: 50px;
+    margin-top: 60px;
     text-align: center;
 }
 
 .collaboration-text {
     color: var(--primary-color);
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
     text-transform: uppercase;
     display: block;
 }
 
 .collab-subtitle {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     display: block;
-    margin-top: 2px;
-    letter-spacing: 1.5px;
+    margin-top: 3px;
+    letter-spacing: 2px;
 }
 
 .logo-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    padding: 10px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    gap: 60px;
 }
 
 .logo-item {
     transition: transform 0.3s ease;
-    display: inline-block;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-item:first-child {
+    justify-content: flex-start;
+}
+
+.logo-item:last-child {
+    justify-content: flex-end;
 }
 
 .logo-item:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }
 
 .partner-logo {
-    height: 50px;
+    height: 90px;
     width: auto;
-    max-width: 100px;
+    max-width: 180px;
     object-fit: contain;
     display: block;
 }
@@ -662,6 +673,20 @@ body {
 .payment-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    min-height: 100px;
+}
+
+.payment-logo {
+    height: 80px;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+    display: block;
+    filter: brightness(1.1);
 }
 
 .payment-card h3 {
@@ -850,32 +875,38 @@ body {
         padding: 0 1rem;
     }
     
-    /* Small logos on mobile */
+    /* Medium size logos on mobile */
     .hero-feeds-logo {
-        height: 80px;
-        max-width: 350px;
+        height: 140px;
+        max-width: 500px;
     }
     
     .logo-container {
-        gap: 25px;
+        flex-direction: column;
+        gap: 30px;
+        padding: 15px 20px;
+    }
+    
+    .logo-item {
+        justify-content: center !important;
     }
     
     .partner-logo {
-        height: 35px;
-        max-width: 70px;
+        height: 60px;
+        max-width: 120px;
     }
     
     .collaboration-text {
-        font-size: 0.75rem;
-        margin-bottom: 12px;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
     }
     
     .collab-subtitle {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
     
     .collaboration-section {
-        margin-top: 35px;
+        margin-top: 40px;
     }
     
     .stats-grid {
@@ -928,17 +959,17 @@ body {
     }
     
     .hero-feeds-logo {
-        height: 70px;
-        max-width: 300px;
+        height: 100px;
+        max-width: 400px;
     }
     
     .logo-container {
-        gap: 20px;
+        gap: 25px;
     }
     
     .partner-logo {
-        height: 30px;
-        max-width: 60px;
+        height: 50px;
+        max-width: 100px;
     }
     
     .btn {
