@@ -5,7 +5,6 @@
 const charityStats = {
     moneyRaised: 125000,      // Total money raised in dollars
     peopleHelped: 5420,       // Number of people helped
-    projectsCompleted: 87,    // Number of completed projects
     volunteers: 234           // Number of active volunteers
 };
 
@@ -43,12 +42,10 @@ function initCounters() {
                 // Animate each counter
                 const moneyElement = document.getElementById('moneyRaised');
                 const peopleElement = document.getElementById('peopleHelped');
-                const projectsElement = document.getElementById('projectsCompleted');
                 const volunteersElement = document.getElementById('volunteers');
                 
                 animateCounter(moneyElement, charityStats.moneyRaised, 2000, '$', '+');
                 animateCounter(peopleElement, charityStats.peopleHelped, 2000, '', '+');
-                animateCounter(projectsElement, charityStats.projectsCompleted, 2000);
                 animateCounter(volunteersElement, charityStats.volunteers, 2000);
                 
                 // Only animate once
