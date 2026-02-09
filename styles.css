@@ -3,23 +3,23 @@
    Change these to customize your site!
    =========================== */
 :root {
-    /* Primary Colors - Orange and Black Theme */
+    /* Primary Colors - Orange and Light Theme */
     --primary-color: #ff6b00;      /* Bright Orange */
     --primary-dark: #e55d00;       /* Darker Orange */
     --secondary-color: #ff8c2e;    /* Light Orange */
     --accent-color: #ff6b00;       /* Orange for CTAs */
     
     /* Text Colors */
-    --text-dark: #1a1a1a;          /* Almost Black */
+    --text-dark: #2c2c2c;          /* Dark Gray for readability */
     --text-light: #666666;
     --text-white: #ffffff;
     
     /* Background Colors */
     --bg-light: #fff5ed;           /* Light Orange/Cream */
     --bg-white: #ffffff;
-    --bg-dark: #0a0a0a;            /* Very Dark/Black */
+    --bg-dark: #1a1a1a;            /* Lighter dark for navbar */
     --bg-orange: #ff6b00;          /* Orange sections */
-    --bg-overlay: rgba(10, 10, 10, 0.85);  /* Dark overlay */
+    --bg-overlay: rgba(0, 0, 0, 0.5);  /* Lighter overlay - was 0.85 */
     
     /* Spacing */
     --section-padding: 80px 20px;
@@ -135,8 +135,10 @@ body {
    HERO SECTION
    =========================== */
 .hero {
-    background: var(--bg-dark);
-    background-image: url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1600');
+    background: linear-gradient(135deg, #fff5ed 0%, #ffe8d6 100%);
+    background-image: 
+        linear-gradient(135deg, rgba(255, 245, 237, 0.95) 0%, rgba(255, 232, 214, 0.95) 100%),
+        url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1600');
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
@@ -147,7 +149,7 @@ body {
 }
 
 .hero-overlay {
-    background: var(--bg-overlay);
+    background: transparent;
     width: 100%;
     padding: var(--section-padding);
     text-align: center;
@@ -167,10 +169,10 @@ body {
 
 .hero-title {
     font-size: 3.5rem;
-    color: var(--text-white);
+    color: var(--text-dark);
     margin-bottom: 1rem;
     font-weight: 800;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }
 
 .hero-title span {
@@ -179,7 +181,7 @@ body {
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: var(--text-white);
+    color: var(--text-dark);
     margin-bottom: 2rem;
     max-width: 600px;
     margin-left: auto;
@@ -454,11 +456,11 @@ body {
    =========================== */
 .contact-section {
     padding: var(--section-padding);
-    background: var(--bg-dark);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
 .contact-section .section-title {
-    color: var(--text-white);
+    color: var(--text-dark);
 }
 
 .contact-content {
@@ -477,7 +479,7 @@ body {
 
 .contact-info p {
     margin-bottom: 1rem;
-    color: var(--text-white);
+    color: var(--text-dark);
 }
 
 .contact-info strong {
@@ -519,8 +521,8 @@ body {
 .contact-form textarea {
     padding: 12px;
     border: 2px solid rgba(255, 107, 0, 0.3);
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--text-white);
+    background: var(--bg-white);
+    color: var(--text-dark);
     border-radius: var(--border-radius);
     font-size: 1rem;
     font-family: inherit;
@@ -529,14 +531,14 @@ body {
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.4);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--bg-white);
 }
 
 /* ===========================
@@ -566,7 +568,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(10, 10, 10, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
     overflow-y: auto;
     animation: fadeIn 0.3s ease;
@@ -585,8 +587,8 @@ body {
 }
 
 .modal-content {
-    background: var(--bg-dark);
-    border: 2px solid var(--primary-color);
+    background: linear-gradient(135deg, #ffffff 0%, #fff5ed 100%);
+    border: 3px solid var(--primary-color);
     border-radius: 20px;
     max-width: 900px;
     width: 100%;
@@ -635,14 +637,14 @@ body {
 .modal-content h2 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    color: var(--text-white);
+    color: var(--text-dark);
     text-align: center;
     text-transform: uppercase;
 }
 
 .modal-subtitle {
     text-align: center;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--text-light);
     margin-bottom: 2rem;
     font-size: 1.125rem;
 }
@@ -655,7 +657,7 @@ body {
 }
 
 .payment-card {
-    background: rgba(255, 107, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
     border: 2px solid rgba(255, 107, 0, 0.3);
     padding: 1.5rem;
     border-radius: 15px;
@@ -667,7 +669,7 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(255, 107, 0, 0.3);
     border-color: var(--primary-color);
-    background: rgba(255, 107, 0, 0.15);
+    background: rgba(255, 255, 255, 1);
 }
 
 .payment-icon {
@@ -692,7 +694,7 @@ body {
 .payment-card h3 {
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
-    color: var(--text-white);
+    color: var(--text-dark);
     font-weight: 700;
 }
 
@@ -706,7 +708,7 @@ body {
 
 .payment-instruction {
     font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--text-light);
     margin-top: 0.75rem;
     line-height: 1.5;
 }
@@ -745,7 +747,7 @@ body {
     grid-column: 1 / -1;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     color: var(--text-white);
-    border: none;
+    border: 2px solid var(--primary-dark);
 }
 
 .crypto-card h3 {
@@ -760,7 +762,7 @@ body {
 }
 
 .crypto-item {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.2);
     padding: 1rem;
     border-radius: 8px;
     backdrop-filter: blur(10px);
@@ -770,6 +772,7 @@ body {
     display: block;
     margin-bottom: 0.5rem;
     font-size: 0.95rem;
+    color: var(--text-white);
 }
 
 .crypto-address {
@@ -780,16 +783,20 @@ body {
     padding: 0.5rem;
     border-radius: 4px;
     margin-bottom: 0.5rem;
+    color: var(--text-white);
 }
 
 .crypto-item .copy-btn {
     font-size: 0.8rem;
     padding: 6px 16px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--text-white);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .crypto-item .copy-btn:hover {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--text-dark);
 }
 
 /* Bank Details */
@@ -800,7 +807,7 @@ body {
 .bank-details p {
     margin-bottom: 0.5rem;
     font-size: 0.95rem;
-    color: var(--text-white);
+    color: var(--text-dark);
 }
 
 .bank-details strong {
@@ -817,12 +824,12 @@ body {
 .modal-footer p {
     margin-bottom: 0.5rem;
     font-size: 1.125rem;
-    color: var(--text-white);
+    color: var(--text-dark);
 }
 
 .small-text {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--text-light);
 }
 
 .small-text strong {
