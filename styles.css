@@ -153,6 +153,18 @@ body {
     text-align: center;
 }
 
+/* 100tk Feeds Logo - Small, at top */
+.feeds-logo-top {
+    margin-bottom: 20px;
+}
+
+.hero-feeds-logo {
+    height: 120px;
+    width: auto;
+    max-width: 500px;
+    object-fit: contain;
+}
+
 .hero-title {
     font-size: 3.5rem;
     color: var(--text-white);
@@ -175,30 +187,37 @@ body {
 }
 
 /* ===========================
-   COLLABORATION LOGOS SECTION
+   COLLABORATION LOGOS SECTION - SMALL
    =========================== */
 .collaboration-section {
-    margin-top: 60px;
+    margin-top: 50px;
     text-align: center;
 }
 
 .collaboration-text {
     color: var(--primary-color);
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
     text-transform: uppercase;
     display: block;
+}
+
+.collab-subtitle {
+    font-size: 0.65rem;
+    display: block;
+    margin-top: 2px;
+    letter-spacing: 1.5px;
 }
 
 .logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    gap: 40px;
     flex-wrap: wrap;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .logo-item {
@@ -207,100 +226,15 @@ body {
 }
 
 .logo-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 .partner-logo {
-    height: 80px;
+    height: 50px;
     width: auto;
-    max-width: 150px;
+    max-width: 100px;
     object-fit: contain;
     display: block;
-}
-
-/* ===========================
-   100TK FEEDS SECTION
-   =========================== */
-.feeds-section {
-    background-color: var(--bg-white);
-    padding: 80px 0;
-}
-
-.feeds-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-}
-
-.feeds-image {
-    flex: 1;
-    max-width: 400px;
-}
-
-.feeds-img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.feeds-text {
-    flex: 1;
-    color: var(--text-dark);
-}
-
-.feeds-title {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 10px;
-    color: var(--text-dark);
-}
-
-.highlight-orange {
-    color: var(--primary-color);
-}
-
-.feeds-subtitle {
-    color: var(--text-light);
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-
-.feeds-description {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--text-light);
-    margin-bottom: 30px;
-}
-
-.feeds-buttons {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.btn-secondary {
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    padding: 12px 30px;
-    border-radius: 25px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.btn-secondary:hover {
-    background-color: var(--primary-color);
-    color: var(--text-white);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-orange);
 }
 
 /* ===========================
@@ -331,13 +265,6 @@ body {
     background: var(--primary-dark);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4);
-}
-
-@media (max-width: 480px) {
-    .btn {
-        padding: 12px 24px;
-        font-size: 0.95rem;
-    }
 }
 
 /* ===========================
@@ -880,25 +807,6 @@ body {
 /* ===========================
    RESPONSIVE DESIGN
    =========================== */
-@media (max-width: 968px) {
-    .feeds-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .feeds-image {
-        max-width: 300px;
-    }
-    
-    .feeds-title {
-        font-size: 2.5rem;
-    }
-    
-    .feeds-buttons {
-        justify-content: center;
-    }
-}
-
 @media (max-width: 768px) {
     /* Mobile Navigation */
     .hamburger {
@@ -942,40 +850,32 @@ body {
         padding: 0 1rem;
     }
     
-    /* Collaboration Logos */
+    /* Small logos on mobile */
+    .hero-feeds-logo {
+        height: 80px;
+        max-width: 350px;
+    }
+    
     .logo-container {
-        gap: 40px;
+        gap: 25px;
     }
     
     .partner-logo {
-        height: 60px;
-        max-width: 120px;
+        height: 35px;
+        max-width: 70px;
     }
     
     .collaboration-text {
-        font-size: 0.8rem;
-        margin-bottom: 20px;
+        font-size: 0.75rem;
+        margin-bottom: 12px;
+    }
+    
+    .collab-subtitle {
+        font-size: 0.6rem;
     }
     
     .collaboration-section {
-        margin-top: 40px;
-    }
-    
-    /* Feeds Section */
-    .feeds-section {
-        padding: 60px 0;
-    }
-    
-    .feeds-title {
-        font-size: 2rem;
-    }
-    
-    .feeds-subtitle {
-        font-size: 0.9rem;
-    }
-    
-    .feeds-description {
-        font-size: 0.95rem;
+        margin-top: 35px;
     }
     
     .stats-grid {
@@ -1027,30 +927,23 @@ body {
         font-size: 0.9rem;
     }
     
-    /* Collaboration Logos */
+    .hero-feeds-logo {
+        height: 70px;
+        max-width: 300px;
+    }
+    
     .logo-container {
-        gap: 30px;
+        gap: 20px;
     }
     
     .partner-logo {
-        height: 50px;
-        max-width: 100px;
+        height: 30px;
+        max-width: 60px;
     }
     
-    /* Feeds Section */
-    .feeds-title {
-        font-size: 1.8rem;
-    }
-    
-    .feeds-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .btn-primary,
-    .btn-secondary {
-        width: 100%;
-        text-align: center;
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
     }
     
     .stat-number {
