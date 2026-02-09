@@ -1,0 +1,10 @@
+# GitHub Pages Configuration
+
+# Build settings
+theme: null
+plugins: []
+
+# Exclude files from the build
+exclude:
+  - README.md
+  - .gitignore
