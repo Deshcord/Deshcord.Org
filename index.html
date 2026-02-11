@@ -11,7 +11,13 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand" style="font-size: 2rem;"><b>D☰SHCORD</b></div>
+            <div class="nav-brand-section">
+                <a href="#home" class="nav-brand" style="font-size: 2rem; text-decoration: none;"><b>D☰SHCORD</b></a>
+                <div class="navbar-total-raised" id="navbarTotalRaised">
+                    <span class="navbar-raised-icon">💰</span>
+                    <span class="navbar-raised-amount">৳0</span>
+                </div>
+            </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -21,6 +27,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#impact">Our Impact</a></li>
+                <li><a href="donors.html">Donors</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -36,14 +43,14 @@
                     <img src="100tk-feeds.png" alt="100tk feeds 1 Person" class="hero-feeds-logo">
                 </div>
                 
-                <!-- NEW: Text container with semi-transparent background for better visibility -->
+                <!-- Text container with semi-transparent background for better visibility -->
                 <div class="hero-text-container">
-                    <h1 class="hero-title">আমাদের সম্মিলিত প্রচেষ্টায় আসবে পরিবর্তন</h1>
+                    <h1 class="hero-title">আমাদের সম্মিলিত প্রচেষ্টায় আসবে পরিবর্তন</h1>
                     <p class="hero-subtitle">Join us in creating positive change in communities around the world</p>
                     <a href="#donate" class="btn btn-primary">Donate Now</a>
                 </div>
                 
-                <!-- Collaboration Logos - BIGGER with MORE SPACING -->
+                <!-- Collaboration Logos -->
                 <div class="collaboration-section">
                     <p class="collaboration-text">D☰SHCORD<br><span class="collab-subtitle">IN COLLABORATION WITH</span></p>
                     <div class="logo-container">
@@ -67,11 +74,20 @@
         <div class="container">
             <h2 class="section-title">Our Impact</h2>
             <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">💰</div>
-                    <div class="stat-number" id="moneyRaised">$0</div>
-                    <div class="stat-label">Total Raised</div>
-                </div>
+                <!-- CLICKABLE DONOR CARD - Links to donors.html -->
+                <a href="donors.html" class="stat-card-link">
+                    <div class="stat-card clickable-stat-card">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-number" id="moneyRaised">৳0</div>
+                        <div class="stat-label">Total Raised</div>
+                        <div class="rotating-donor" id="rotatingDonor">
+                            <span class="donor-prefix">Recent:</span>
+                            <span class="donor-name-rotating">Loading...</span>
+                        </div>
+                        <div class="view-donors-hint">👉 View All Donors</div>
+                    </div>
+                </a>
+                
                 <div class="stat-card">
                     <div class="stat-icon">👥</div>
                     <div class="stat-number" id="peopleHelped">0</div>
@@ -92,7 +108,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>About Our Mission</h2>
-                    <p>We don’t just dream of a better world; we build it, One community at a time. From healthcare to classrooms, we are dedicated to 'স্থায়ী ইতিবাচক পরিবর্তন' (lasting positive change). No middlemen, no excuses, just pure transparency and 'অদম্য প্রচেষ্টা' (untiring effort).</p>
+                    <p>We don't just dream of a better world; we build it, One community at a time. From healthcare to classrooms, we are dedicated to 'স্থায়ী ইতিবাচক পরিবর্তন' (lasting positive change). No middlemen, no excuses, just pure transparency and 'অদম্য প্রচেষ্টা' (untiring effort).</p>
                     <p>Together, we turn your support into real-world opportunity. কারণ আমরা বিশ্বাস করি, ক্ষুদ্র প্রচেষ্টাই আনে মহৎ পরিবর্তন। (Because we believe small efforts bring great change.)</p>
                 </div>
                 <div class="about-image">
@@ -108,9 +124,7 @@
             <h2 class="section-title">Our Work in Action</h2>
             <p class="section-subtitle">See the impact of your donations</p>
             
-            <!-- Gallery Grid -->
             <div class="gallery-grid" id="galleryGrid">
-                <!-- Default placeholder images - these can be replaced -->
                 <div class="gallery-item">
                     <img src="Frame 640.png" alt="Atim Khana initiative">
                     <div class="gallery-overlay">
