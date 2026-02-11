@@ -1,7 +1,7 @@
 [
   {
     "name": "Deshcord",
-    "amount": 1,
+    "amount": 1000,
     "date": "11-2-2026",
     "message": "For the children's education",
     "anonymous": false
@@ -20,4 +20,5 @@
     "message": "For the children's education",
     "anonymous": false
   }
+
 ]
