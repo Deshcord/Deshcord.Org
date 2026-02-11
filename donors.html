@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="D☰SHCORD Donors - Thank you to our generous supporters">
+    <title>Our Generous Donors - D☰SHCORD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand" style="font-size: 2rem; text-decoration: none;"><b>D☰SHCORD</b></a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">← Back to Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#impact">Our Impact</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section for Donors Page -->
+    <section class="donors-hero">
+        <div class="container">
+            <h1 class="donors-hero-title">Wall of Gratitude</h1>
+            <p class="donors-hero-subtitle">Honoring the generous hearts who make our mission possible</p>
+            <div class="total-impact-banner">
+                <div class="impact-stat">
+                    <span class="impact-number" id="totalDonors">0</span>
+                    <span class="impact-label">Generous Donors</span>
+                </div>
+                <div class="impact-stat">
+                    <span class="impact-number" id="totalAmountDonated">$0</span>
+                    <span class="impact-label">Total Raised</span>
+                </div>
+                <div class="impact-stat">
+                    <span class="impact-number" id="totalLivesChanged">0</span>
+                    <span class="impact-label">Lives Changed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Donors Section -->
+    <section class="top-donors-section">
+        <div class="container">
+            <h2 class="section-title">🏆 Champions of Change</h2>
+            <p class="section-subtitle">Our highest contributors who inspire us all</p>
+            <div class="top-donors-podium" id="topDonorsPodium">
+                <!-- Top 3 donors will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- All Donors Section -->
+    <section class="all-donors-section">
+        <div class="container">
+            <h2 class="section-title">All Our Heroes</h2>
+            <p class="section-subtitle">Every contribution, no matter the size, makes a difference</p>
+            
+            <!-- Filter/Sort Options -->
+            <div class="donor-controls">
+                <div class="search-box">
+                    <input type="text" id="donorSearch" placeholder="🔍 Search donors by name...">
+                </div>
+                <div class="sort-buttons">
+                    <button class="sort-btn active" data-sort="amount">Highest Amount</button>
+                    <button class="sort-btn" data-sort="recent">Most Recent</button>
+                    <button class="sort-btn" data-sort="name">Alphabetical</button>
+                </div>
+            </div>
+
+            <!-- Donors Grid -->
+            <div class="donors-grid" id="donorsGrid">
+                <!-- Donors will be dynamically loaded here from donors.json -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="donors-cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join Our Community of Change-Makers</h2>
+                <p>Your name could be on this wall. Every donation brings hope to those who need it most.</p>
+                <a href="index.html#donate" class="btn btn-primary btn-large">Make a Donation Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Deshcord Foundation. All rights reserved.</p>
+            <p>Empowering communities, transforming lives.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#gallery">Gallery</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="donors.js"></script>
+</body>
+</html>
